@@ -16,6 +16,7 @@ public class SheepManager : MonoBehaviour
             Vector3 spawnPosition = GetRandomPositionOnTerrain();
             Instantiate(sheepPrefab, spawnPosition, Quaternion.identity);
         }
+        UIManager.Instance.UpdateSheepCount(sheepCount);
     }
 
     Vector3 GetRandomPositionOnTerrain()
